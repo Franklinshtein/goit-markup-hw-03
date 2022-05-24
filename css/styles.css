@@ -3,15 +3,19 @@
     --accent-color: #2196f3;
     --text-color-white: #ffffff;
     --text-color-gray: #757575;
+    --background-color: #2f303a;
 }
 
-.container {
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+body: {
+    /* шрифт сайту */
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 16px;
+    color: var(--text-color-gray);
+    background-color: #ffffff;
+    letter-spacing: 0.03em;
 }
 
-/* костиль */
+/* костиль  щоб сховати назву секції*/
 .hidden {
     display: none;
 }
@@ -22,29 +26,20 @@
     padding: 0;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-body: {
-    font-family: 'Roboto', 'sans-serif';
-    color: var(--primary-text-color);
-    background-color: #ffffff;
-}
-
+/* прибираємо крапки в списків */
 li {
-    list-style: none;
+    /* list-style: none; */
+}
+
+/* прибираємо стандартне підкреслення в посилань*/
+a {
     text-decoration: none;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
 
 header {
+    display: flex;
+    align-items: center;
     position: relative;
     font-weight: 500;
     font-size: 14px;
@@ -61,12 +56,6 @@ header {
     text-decoration: none;
 }
 
-header .logo {
-    margin-top: 24px;
-    position: absolute;
-
-}
-
 .logo-color-up {
     color: var(--primary-text-color);
 }
@@ -75,25 +64,28 @@ header .logo {
     color: var(--text-color-white);
 }
 
-.main-nav {
-    margin-left: 453px;
-}
 
 .main-nav li {
     display: inline-flex;
+    align-items: center;
     margin: 32px 50px;
-
 }
 
-.contacts{
+.main-nav :nth-last-child(-n +1) {
+    margin-right: 0px;
+}
+
+.contacts {
     display: inline-flex;
     margin-right: 50px;
     color: var(--text-color-gray);
-    position:absolute;
-    margin-top: -52px;
-    margin-left: 1078px;
-
 }
+
+
+/* Інтерактивні елементи (кнопки і посилання),
+при наведенні мишкою або фокусі з клавіатури,
+мають активний стан,
+вказаний в макеті (зміна кольору). */
 
 a:hover,
 a:focus {
@@ -116,7 +108,13 @@ a:focus {
     font-size: 16px;
     line-height: 1.6;
     cursor: pointer;
-    
+
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    outline: 2px solid teal;
 }
 
 .hero-text {
@@ -128,7 +126,7 @@ a:focus {
     text-transform: uppercase;
     color: var(--text-color-white);
     /* padding: 200px 452px; */
-    background-color: #2F303A;
+    background-color: var(--background-color);
 }
 
 .hero-button {
@@ -141,7 +139,8 @@ h2 {
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
-    letter-spacing: 0.03em;
+  
+    margin-bottom: 50px;
 }
 
 .description {
@@ -161,6 +160,12 @@ p {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.job {
+    text-align: center;
 }
 
 .portfolio-descripion {
@@ -173,25 +178,41 @@ p {
     display: flex;
     flex-wrap: wrap;
 }
+
 .portfolio-list li {
     margin-right: 30px;
     margin-bottom: 30px;
 }
 
-.portfolio-list li:nth-child(3n){
+.portfolio-list li:nth-child(3n) {
     margin-right: 0px;
 }
 
-.item-description{
+.portfolio-list:nth-last-child(-n +3) {
+    margin-bottom: 0px;
+}
+
+.item-description {
     margin-top: 4px;
 }
 
+.flex {
+    display: flex;
 
+}
+
+.flex li {
+    margin-right: 30px;
+}
+
+.flex li:nth-last-child(-n -3) {
+    margin-right: 0px;
+}
 
 .porfolio-nav {
-        display: flex;
-        flex-wrap: wrap;
-    }
+    display: flex;
+    flex-wrap: wrap;
+}
 
 footer {
     display: block;
@@ -199,9 +220,9 @@ footer {
     line-height: 1.71;
     color: var(--text-color-gray);
     position: absolute;
-    width: 1600px;
+    width: 1200px;
     height: 252px;
-    background-color: #2f303a;
+    background-color: var(--background-color);
 
 }
 
