@@ -15,9 +15,18 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* костиль  щоб сховати назву секції*/
-.hidden {
-  display: none;
+/* сховати назву секції*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* ресет вбудованих стилів браузера*/
@@ -71,13 +80,12 @@ header {
 .main-nav li {
   display: inline-flex; /* поставив в ряд але здається має бути інлайн-блок */
   align-items: center;
-  margin: 32px 50px;
+  margin: 32px;
 }
 
 /* контакти в хедері */
 .contacts li {
   display: inline-flex; /* поставив в ряд  */
-  margin-right: 50px;
   color: var(--text-color-gray);
 }
 
@@ -106,6 +114,15 @@ a:focus {
   font-size: 16px;
   line-height: 1.6;
   cursor: pointer;
+}
+
+.container {
+  width: 1200px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* секції */
@@ -183,7 +200,13 @@ p {
 
 .portfolio-list {
   display: flex;
+
   flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+.item{
+  flex-basis: calc(100% / 3 - 30px);
 }
 /* відступи між блоками */
 .portfolio-list li {
