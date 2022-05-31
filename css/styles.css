@@ -11,7 +11,7 @@
 body {
   font-family: 'Roboto', sans-serif; /* основний шрифт сайту */
   font-size: 16px;
-  color: var(--primary-text-color); 
+  color: var(--primary-text-color);
   letter-spacing: 0.03em;
 }
 
@@ -53,6 +53,14 @@ header {
 
   display: flex; /* поставив елементи хедера в ряд */
   align-items: center;
+  border-bottom: 1px solid #ececec;
+}
+
+/* меню сторінок в хедері */
+.main-nav li {
+  display: inline-flex;
+  align-items: center;
+  margin: 32px;
 }
 
 /* логотип WebStudio */
@@ -74,13 +82,6 @@ header {
 /* білий текст логотипу внизу  */
 .logo-color-down {
   color: var(--text-color-white);
-}
-
-/* меню сторінок в хедері */
-.main-nav li {
-  display: inline-flex; /* поставив в ряд але здається має бути інлайн-блок */
-  align-items: center;
-  margin: 32px;
 }
 
 /* контакти в хедері */
@@ -107,7 +108,7 @@ a:focus {
 
 /* загальний стиль кнопок */
 .button-style {
-  background:var(--button-background);
+  background: var(--button-background);
   border-radius: 4px;
   text-align: center;
   font-weight: 500;
@@ -147,9 +148,14 @@ a:focus {
 .hero-button {
   font-weight: 700;
   letter-spacing: 0.06em;
-  text-align: center;
-  background-color:var(--accent-color);
-  color:var(--text-color-white);
+  background-color: var(--accent-color);
+  color: var(--text-color-white);
+
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 /* заголовок секції */
@@ -187,6 +193,7 @@ p {
   margin-top: 30px;
   text-align: center;
 }
+
 .job {
   text-align: center;
   line-height: 1.18;
@@ -205,7 +212,11 @@ p {
   margin-right: -30px;
   margin-bottom: -30px;
 }
-.item{
+.border {
+  border: 1px solid #eeeeee;
+}
+
+.item {
   flex-basis: calc(100% / 3 - 30px);
 }
 /* відступи між блоками */
@@ -215,18 +226,17 @@ p {
 }
 
 /* знімаємо відступи знизу */
-.portfolio-list li:nth-last-child(-n+3) {
+.portfolio-list li:nth-last-child(-n + 3) {
   margin-bottom: 0px;
 }
 
 /* кожний 3й елемент знімаємо відступ зправа */
-.portfolio-list li:nth-child(3n+3){
-    margin-right: 0px;
+.portfolio-list li:nth-child(3n + 3) {
+  margin-right: 0px;
 }
 
 .item-description {
   margin-top: 4px;
-
 }
 
 .flex {
@@ -250,7 +260,7 @@ p {
   font-size: 16px;
   line-height: 1.62;
 
-text-align: center;
+  text-align: center;
   display: flex;
 }
 
@@ -260,7 +270,6 @@ footer {
   color: var(--text-color-gray);
   background-color: var(--background-color);
 }
-
 
 .logo .down {
   margin-top: 60px;
