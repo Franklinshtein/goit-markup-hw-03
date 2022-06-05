@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- нормалізатор -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-    />
-    <!-- шрифти (Raleway – 700; Roboto – 400, 500, 700 і 900)-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- стилі -->
-    <link rel="stylesheet" href="./css/styles.css" />
 
-    <title>Студія</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- нормалізатор -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
 
-  <body>
-      <header>
-        <div class="container">
-        <a class="logo" href="./index.html">Web<span class="logo-color-up">Studio</span></a>
-        <nav class="main-nav">
-          <ul>
-            <li><a class="navigation" href="./index.html">Студия</a></li>
-            <li><a class="navigation" href="./portfolio.html">Портфолио</a></li>
-            <li><a class="navigation" href="#link">Контакты</a></li>
-          </ul>
-        </nav>
+  <!-- шрифти (Raleway – 700; Roboto – 400, 500, 700 і 900)-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- стилі -->
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <title>Студія</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <a class="logo" href="./index.html">Web<span class="logo-color-up">Studio</span></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a class="navigation" href="./index.html">Студия</a></li>
+          <li><a class="navigation" href="./portfolio.html">Портфолио</a></li>
+          <li><a class="navigation" href="#link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header-contacts">
         <ul class="contacts">
           <li><a class="navigation" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
           <li><a class="navigation" href="tel:+380961111111">+380961111111</a></li>
         </ul>
-        </div>
-      </header>
+      </div>
+    </div>
+  </header>
 
-      <main>
-        <section class="section">
-          <div class="container">
+    <main>
+      <section class="section">
+        <div class="container">
           <!-- прихований заголовок -->
           <h1 class="visually-hidden">Портфолио</h1>
-          <nav>
+
+          <nav class="portfolio-nav-container">
             <ul class="porfolio-nav">
               <li><button class="button-style" type="button">Все</button></li>
               <li><button class="button-style" type="button">Веб-сайты</button></li>
@@ -54,16 +56,17 @@
               <li><button class="button-style" type="button">Маркетинг</button></li>
             </ul>
           </nav>
+
           <ul class="portfolio-list">
-            <li lass="item">
-              <a href="#">
+            <li class="item">
+              <a class="items" href="#">
                 <img
                   src="./images/portfolio/port_img1.jpeg"
                   alt="лептоп"
                   width="370"
                   height="294"
                 />
-                <div class="border">
+                <div class="items-border">
                   <h3 class="portfolio-descripion">Технокряк</h3>
                   <p class="item-description">Веб-сайт</p>
                 </div>
@@ -78,12 +81,14 @@
                   width="370"
                   height="294"
                 />
-                <h3 class="portfolio-descripion">Постер New Orlean vs Golden Star</h3>
-                <p class="item-description">Дизайн</p>
+                <div class="items-border">
+                  <h3 class="portfolio-descripion">Постер New Orlean vs Golden Star</h3>
+                  <p class="item-description">Дизайн</p>
+                </div>
               </a>
             </li>
 
-            <li lass="item">
+            <li class="item">
               <a class="items" href="#">
                 <img
                   src="./images/portfolio/port_img3.jpeg"
@@ -91,12 +96,14 @@
                   width="370"
                   height="294"
                 />
-                <h3 class="portfolio-descripion">Ресторан Seafood</h3>
-                <p class="item-description">Приложение</p>
+                <div class="items-border">
+                  <h3 class="portfolio-descripion">Ресторан Seafood</h3>
+                  <p class="item-description">Приложение</p>
+                </div>
               </a>
             </li>
 
-            <li lass="item">
+            <li class="item">
               <a class="items" href="#">
                 <img
                   src="./images/portfolio/port_img4.jpeg"
@@ -104,12 +111,14 @@
                   width="370"
                   height="294"
                 />
-                <h3 class="portfolio-descripion">Проект Prime</h3>
-                <p class="item-description">Маркетинг</p>
+                <div class="items-border">
+                  <h3 class="portfolio-descripion">Проект Prime</h3>
+                  <p class="item-description">Маркетинг</p>
+                </div>
               </a>
             </li>
 
-            <li lass="item">
+            <li class="item">
               <a class="items" href="#">
                 <img
                   src="./images/portfolio/port_img5.jpeg"
@@ -117,12 +126,14 @@
                   width="370"
                   height="294"
                 />
-                <h3 class="portfolio-descripion">Проект Boxes</h3>
-                <p class="item-description">Приложение</p>
+                <div class="items-border">
+                  <h3 class="portfolio-descripion">Проект Boxes</h3>
+                  <p class="item-description">Приложение</p>
+                </div>
               </a>
             </li>
 
-            <li lass="item">
+            <li class="item">
               <a class="items" href="#">
                 <img
                   src="./images/portfolio/port_img6.jpeg"
@@ -130,12 +141,14 @@
                   width="370"
                   height="294"
                 />
-                <h3 class="portfolio-descripion" lang="en">Inspiration has no Borders</h3>
-                <p class="item-description">Веб-сайт</p>
+                <div class="items-border">
+                  <h3 class="portfolio-descripion" lang="en">Inspiration has no Borders</h3>
+                  <p class="item-description">Веб-сайт</p>
+                </div>
               </a>
             </li>
 
-            <li lass="item">
+            <li class="item">
               <a class="items" href="#">
                 <img
                   src="./images/portfolio/port_img7.jpeg"
@@ -143,20 +156,24 @@
                   width="370"
                   height="294"
                 />
-                <h3 class="portfolio-descripion">Издание Limited Edition</h3>
-                <p class="item-description">Дизайн</p>
+                <div class="items-border">
+                  <h3 class="portfolio-descripion">Издание Limited Edition</h3>
+                  <p class="item-description">Дизайн</p>
+                </div>
               </a>
             </li>
 
-            <li lass="item">
+            <li class="item">
               <a class="items" href="#">
                 <img src="./images/portfolio/port_img8.jpeg" alt="бирка" width="370" height="294" />
-                <h3 class="portfolio-descripion">Проект LAB</h3>
-                <p class="item-description">Маркетинг</p>
+                <div class="items-border">
+                  <h3 class="portfolio-descripion">Проект LAB</h3>
+                  <p class="item-description">Маркетинг</p>
+                </div>
               </a>
             </li>
 
-            <li lass="item">
+            <li class="item">
               <a class="items" href="#">
                 <img
                   src="./images/portfolio/port_img9.jpeg"
@@ -164,17 +181,19 @@
                   width="370"
                   height="294"
                 />
-                <h3 class="portfolio-descripion" lang="en">Growing Business</h3>
-                <p class="item-description">Приложение</p>
+                <div class="items-border">
+                  <h3 class="portfolio-descripion" lang="en">Growing Business</h3>
+                  <p class="item-description">Приложение</p>
+                </div>
               </a>
             </li>
           </ul>
-          </div>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
 
-      <footer>
-        <div class="container">
+    <footer>
+      <div class="container">
         <a class="logo" href="./index.html">Web<span class="logo-color-down">Studio</span></a>
         <address>
           <ul>
@@ -191,7 +210,7 @@
             <li><a href="tel:+380961111111">+380961111111</a></li>
           </ul>
         </address>
-        </div>
-      </footer>
+      </div>
+    </footer>
   </body>
 </html>
