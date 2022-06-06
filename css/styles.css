@@ -287,9 +287,8 @@ p {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+  margin: -30px;
   padding: 0px;
-  outline: 1px solid tomato; 
 }
 
 /* відступи між блоками */
@@ -305,6 +304,10 @@ p {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   padding: 20px 24px;
+}
+
+.portfolio-list li:nth-child(3n) {
+margin-right: 0px;
 }
 
 /* знімаємо відступи знизу */
@@ -373,7 +376,6 @@ footer {
 }
 
 address {
-  /* margin-left: 215px; */
   margin-top: 20px;
   font-style: normal; /*прибираємо курсив який надає тег "адрес"*/
 }
@@ -386,14 +388,14 @@ address ul {
   color: var(--text-color-white);
 }
 
-.address li {
+/* .address li {
   margin-bottom: 9px;
-}
+} */
 
 .address-link {
 color: rgba(255, 255, 255, 0.6);
 }
 
-.address li:last-child {
-  margin-bottom: 0px;
+.address-item:not(:last-child) {
+margin-bottom: 9px;
 }
