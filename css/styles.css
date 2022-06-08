@@ -6,7 +6,8 @@
   --text-color-gray: #757575;
   --background-color: #2f303a;
   --button-background: #f5f4fa;
-  --background-team-color:#f5f4fa;
+  --background-team-color: #f5f4fa;
+  --card-set-gap: 30px;
 }
 
 body {
@@ -76,21 +77,29 @@ a {
   align-items: center;
 }
 
-
-/* меню сторінок в хедері */
-.main-nav li {
-  display: inline-flex;
+.main-nav {
+  display: flex;
   align-items: center;
-  margin-left: 50px;
+  margin-left: 93px;
 }
-.main-nav li a {
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  padding-left: 0px;
+}
+
+.nav-list-item li:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav-list-item {
   padding-top: 32px;
   padding-bottom: 32px;
 }
 
-/* очищуємо крайній правий відступ крайнього елемента */
-.main-nav li:last-child {
-  padding-right: 0px;
+.nav-list-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 /* логотип WebStudio */
@@ -113,23 +122,25 @@ a {
 .logo-color-down {
   color: var(--text-color-white);
 }
+
 .header-contacts {
   display: flex;
   margin-left: auto;
   align-items: center;
 }
 
-/* контакти в хедері */
-.contacts li {
-  display: inline-flex; /* поставив в ряд  */
-  color: var(--text-color-gray);
-}
-
 .contacts {
+  display: flex;
   margin-left: auto;
   padding: 0px;
 }
+
+/* контакти в хедері */
 .contacts li {
+  color: var(--text-color-gray);
+}
+
+.contact-item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -203,6 +214,12 @@ a:focus {
   padding: 10px 32px;
 }
 
+.hero-button:hover {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
 .hero-section {
   background-color: var(--background-color);
   margin: 0 auto;
@@ -212,14 +229,13 @@ a:focus {
 }
 
 .about {
-  padding-top: 0
+  padding-top: 0;
 }
 
 img {
   display: block;
-  max-width:100%;
+  max-width: 100%;
 }
-
 
 /* заголовок секції */
 .title {
@@ -267,9 +283,11 @@ p {
 }
 
 .team-card {
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
 }
 
 .job {
@@ -291,9 +309,17 @@ p {
   padding: 0px;
 }
 
+.benefits-item {
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
+}
+
+.specialization-item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+}
+
 /* відступи між блоками */
 .item {
-  flex-basis: calc(100% / 3 - 30px);
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -307,7 +333,7 @@ p {
 }
 
 .portfolio-list li:nth-child(3n) {
-margin-right: 0px;
+  margin-right: 0px;
 }
 
 /* знімаємо відступи знизу */
@@ -336,29 +362,30 @@ margin-right: 0px;
   margin-right: 0px;
 }
 
+.portfolio-filter:not(:first-child) {
+  margin-left: 8px;
+}
+
 /* кнопки навігації на сторінці портфоліо*/
 .porfolio-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin-bottom: 50px;
+}
+
+.portfolio-filter {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   display: flex;
-}
-
-.porfolio-nav li {
-margin-left: 8px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .porfolio-nav button {
-  margin-left: 8px;
   padding: 6px 22px;
-}
-
-.portfolio-nav-container {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
 }
 
 footer {
@@ -379,6 +406,7 @@ address {
   margin-top: 20px;
   font-style: normal; /*прибираємо курсив який надає тег "адрес"*/
 }
+
 address ul {
   padding-left: 0px;
   margin: 0px;
@@ -388,14 +416,10 @@ address ul {
   color: var(--text-color-white);
 }
 
-/* .address li {
-  margin-bottom: 9px;
-} */
-
 .address-link {
-color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .address-item:not(:last-child) {
-margin-bottom: 9px;
+  margin-bottom: 9px;
 }
