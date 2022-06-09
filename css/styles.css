@@ -7,7 +7,8 @@
   --background-color: #2f303a;
   --button-background: #f5f4fa;
   --background-team-color: #f5f4fa;
-  --card-set-gap: 30px;
+  --gap: 30px;
+  --cols: 3;
 }
 
 body {
@@ -39,8 +40,7 @@ h3,
 h4,
 p,
 ul,
-ul[class],
-ol[class],
+ol,
 li,
 figure,
 figcaption,
@@ -287,7 +287,7 @@ p {
 }
 
 .team-card {
-  flex-basis: calc((100% - 30px * (4 - 1)) / 4);
+  flex-basis:calc((100% - 30px * (4 - 1)) / 4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -309,21 +309,21 @@ p {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  margin: -30px;
+  margin-left: -30px;
   padding: 0px;
 }
 
 .benefits-item {
-  flex-basis: calc((100% - 30px * (4 - 1)) / 4);
+flex-basis:calc((100% - var(--gap) * (4 - 1)) / 4);
 }
 
 .specialization-item {
-  flex-basis: calc((100% - 30px * (3 - 1)) / 3);
+flex-basis:calc((100% - var(--gap) * (var(--cols) - 1)) / var(--cols));
 }
 
 /* відступи між блоками */
 .item {
-  flex-basis: calc((100% - 30px * (3 - 1)) / 3);
+  flex-basis:calc((100% - var(--gap) * (var(--cols) - 1)) / var(--cols));
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -352,8 +352,8 @@ p {
 /* flex для всіх секцій */
 .flex {
   display: flex;
-  justify-content: space-between;
   padding-left: 0px;
+  gap: 30px;
 }
 
 /* знімаємо правий відступ з крайніх елементів на головній сторінці*/
@@ -376,7 +376,7 @@ p {
   justify-content: center;
   align-items: center;
   padding: 0px;
-  margin-bottom: 50px;
+  margin:0 auto 50px;
 }
 
 .portfolio-filter {
